@@ -1,0 +1,325 @@
+html,
+body {
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.head {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 0;
+    background-color: antiquewhite;
+    border: solid black 2px;
+    border-radius: 8px;
+}
+
+.background {
+    width: 900px;
+    background: linear-gradient(to top left, rgb(99, 48, 1), rgb(182, 170, 13), rgb(44, 0, 24));
+    margin: auto;
+    margin-top: 50px;
+    border: dashed goldenrod 2px;
+    border-radius: 12px;
+}
+
+.doorBackground {
+    padding: 40px;
+    margin-left: 47px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 700px;
+    height: 50%;
+    background-color: rgb(85, 241, 255);
+    border: solid rgb(0, 43, 81) 10px;
+    border-radius: 20%;
+}
+
+.laugh {
+    margin-top: 140px;
+    margin-left: 45px;
+    color: antiquewhite;
+    display: none;
+    transform-origin: 25%;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(0, 43, 81);
+    font-family:cursive;
+    font-size: 2.5rem;
+}
+
+p.bubble {
+    margin-top: 0;
+    margin-right: -30px;
+    font-family: fantasy;
+    font-weight: bold;
+    text-decoration: underline;
+    color: black;
+}
+
+.door {
+    position: relative;
+    flex: 1;
+    width: 20%;
+    height: 300px;
+    background-color: goldenrod;
+    border: double rgb(50, 22, 1) 6px;
+    border-radius: 22px;
+    padding: 7px;
+    margin: 3%;
+    display: flex;
+    z-index: 4;
+}
+
+
+
+
+.door:hover {
+    background-color: black;
+}
+
+.door:active {
+    background-color: black;
+}
+
+.knob {
+    background: linear-gradient(to top right, brown, black);
+    width: 20px;
+    height: 20px;
+    border: solid black 2px;
+    border-radius: 50%;
+    margin-top: 150px;
+    margin-left: 50%;
+    z-index: 6;
+}
+
+.monster {
+    position: absolute;
+    background: black;
+    height: 70px;
+    width: 30px;
+    border: dashed darksalmon 6px;
+    border-radius: 20%;
+    animation: monAnim 1s linear 1s infinite;
+    margin-top: 235px;
+    margin-left: 160px;
+    z-index: 9;
+    display: block;
+}
+
+.monster:active {
+    animation: none;
+    background-color: white;
+}
+
+.arm {
+    width: 60px;
+    height: 10px;
+    background-color: salmon;
+    border: solid black 2px;
+    border-radius: 20%;
+    animation: armWave 1s linear infinite;
+
+}
+
+.rightArm {
+    margin-left: 25px;
+    margin-top: -13px;
+    transform-origin: center left;
+}
+
+.leftArm {
+    margin-top: 10px;
+    margin-left: -60px;
+    transform-origin: center right;
+}
+
+.eye {
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    animation: eyeGlow .1s linear infinite;
+}
+
+.leftEye {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.rightEye {
+    margin-top: -5px;
+    margin-left: 18px;
+}
+
+button {
+    border: solid goldenrod 3px;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(63, 1, 1);
+    width: 222px;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    margin-left: 300px;
+    position: absolute;
+    padding: 25px;
+
+}
+
+button:hover {
+    background-color: goldenrod;
+    border: solid white 3px;
+    color: black;
+}
+
+button:active {
+    background-color: red;
+}
+
+.heart {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    margin-left: 700px;
+    margin-top: 40px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 50px 50px 0 0;
+}
+
+.hearta {
+    transform: rotate(-45deg)
+}
+
+.heartb {
+    transform: rotate(45deg);
+    margin-left: 708px;
+}
+
+
+
+#heart1 {
+    flex: 1 display: block;
+}
+
+#heart2 {
+margin-left: 50px;
+    display: block;
+}
+
+@keyframes laugh {
+    0% {
+        transform: scale(20%)
+    }
+
+    60% {
+        transform: scale(150%)
+    }
+
+    100% {
+        transform: scale(20%);
+    }
+}
+
+@keyframes gameOver {
+    0% {
+        margin-left: -150px;
+    }
+
+    50% {
+        margin-left: 850px;
+    }
+
+    100% {
+        margin-left: -150px;
+    }
+}
+
+@keyframes eyeGlow {
+    0% {
+        background-color: rgb(255, 248, 36);
+    }
+
+    33% {
+        background-color: red;
+    }
+
+    66% {
+        background-color: purple;
+    }
+}
+
+@keyframes armWave {
+    0% {
+        transform: rotate();
+    }
+
+    33% {
+        transform: rotate(-65deg);
+    }
+}
+
+@keyframes monAnim {
+    0% {
+        background-color: black;
+        transform: rotate(360deg);
+    }
+
+    25% {
+        background-color: yellow;
+    }
+
+    50% {
+        background-color: rgb(63, 1, 1);
+        transform: rotate(-360deg);
+    }
+
+    75% {
+        background-color: orangered;
+    }
+}
+
+@keyframes flying {
+    0% {
+        margin-top: 400px;
+        margin-left: -10px;
+        transform:rotate(50deg);
+    }
+
+    25% {
+        margin-top: -100px;
+        margin-left: -10px;
+        transform: rotate(-50deg)
+    }
+
+    50% {
+        margin-top: -100px;
+        margin-left: 400px;
+        transform:rotate(50deg);
+    }
+
+    70% {
+        margin-top: 400px;
+        margin-left: 800px;
+        transform: rotate(-50deg)
+    }
+
+    100% {
+        margin-top: 400px;
+        margin-left: -10px;
+    }
+
+}
